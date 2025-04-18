@@ -3,8 +3,8 @@ vim.opt.number = true -- display line numbers
 vim.opt.relativenumber = true -- display relative line numbers
 vim.opt.numberwidth = 2 -- set width of line number column
 vim.opt.signcolumn = "yes" -- always show sign column
-vim.opt.wrap = false -- display lines as single line
-vim.opt.scrolloff = 10 -- number of lines to keep above/below cursor
+vim.opt.wrap = true -- display lines as single line
+vim.opt.scrolloff = 8 -- number of lines to keep above/below cursor
 vim.opt.sidescrolloff = 8 -- number of columns to keep to the left/right of cursor
 
 -- Tab spacing/behavior
@@ -37,3 +37,13 @@ vim.opt.cursorline = true -- highlight current line
 vim.opt.hlsearch = true -- highlight all matches in search
 vim.opt.ignorecase = true -- ignore case in search
 vim.opt.smartcase = true -- match case if explicitly stated
+
+vim.g.netrw_bufsettings = "noma nomod nu rnu nobl nowrap ro"
+
+vim.opt.list = true
+vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+
+-- Preview substitutions live, as you type!
+vim.opt.inccommand = "split"
+
+vim.opt.swapfile = false
